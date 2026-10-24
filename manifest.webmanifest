@@ -1,0 +1,14 @@
+{
+  "name": "Control Administrativo",
+  "short_name": "Control Admin",
+  "description": "Seguimiento laboral, caja chica, importes de taxis, inventario perecedero y actividades fijas.",
+  "lang": "es-MX",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f7fb",
+  "theme_color": "#16324f",
+  "icons": [
+    {"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
+  ]
+}

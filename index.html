@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#16324f">
+  <meta name="description" content="Control administrativo de pendientes, caja chica, taxis, inventario perecedero y actividades recurrentes.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <title>Control Administrativo</title>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><div class="logo">CA</div><div><strong>Control Administrativo</strong><small>Seguimiento laboral</small></div></div>
+    <button id="exportBtn" class="button ghost">Exportar datos</button>
+  </header>
+  <main>
+    <section class="welcome">
+      <div><p class="eyebrow">PANEL DE CONTROL</p><h1>Hola, vamos a organizar tu día.</h1><p class="muted">Registra actividades, controla comprobaciones y da seguimiento a solicitudes.</p></div>
+      <div class="today" id="todayLabel"></div>
+    </section>
+    <section class="stats" id="stats"></section>
+    <nav class="tabs" aria-label="Módulos">
+      <button class="tab active" data-view="dashboard">Resumen</button>
+      <button class="tab" data-view="tasks">Pendientes</button>
+      <button class="tab" data-view="followups">Seguimientos</button>
+      <button class="tab" data-view="cash">Caja chica</button>
+      <button class="tab" data-view="arqueos">Arqueos</button>
+      <button class="tab" data-view="taxis">Taxis</button>
+      <button class="tab" data-view="perishables">Inventario perecedero</button>
+      <button class="tab" data-view="recurring">Actividades fijas</button>
+    </nav>
+    <section id="view"></section>
+    <p class="notice"><strong>Versión inicial:</strong> los datos se guardan en este navegador y dispositivo. Antes de usar información laboral real desde varios dispositivos, hay que conectar una base de datos con inicio de sesión y sincronización.</p>
+  </main>
+  <dialog id="itemDialog">
+    <form id="itemForm" method="dialog">
+      <div class="dialog-head"><h2 id="dialogTitle">Nuevo registro</h2><button type="button" class="close" id="closeDialog" aria-label="Cerrar">×</button></div>
+      <div id="formFields" class="form-fields"></div>
+      <div class="dialog-actions"><button type="button" class="button ghost" id="cancelDialog">Cancelar</button><button type="submit" class="button primary">Guardar registro</button></div>
+    </form>
+  </dialog>
+  <script src="app.js"></script>
+</body>
+</html>
